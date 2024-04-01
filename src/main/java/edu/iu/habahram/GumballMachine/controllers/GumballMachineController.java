@@ -45,4 +45,21 @@ public class GumballMachineController {
             throw new RuntimeException(e);
         }
     }
+    @PutMapping("/eject-quarter")
+    public TransitionResult ejectQuarte(@RequestBody TransitionResult transitionResult){
+        try{
+            return gumballService.ejectQuarter(transitionResult.message());
+        } catch (Exception e){
+            throw new RuntimeException(e);
+        }
+    }
+
+    @PutMapping("/turn-crank")
+    public TransitionResult turnCrank(@RequestBody TransitionResult transitionResult){
+        try{
+            return gumballService.ejectQuarter(transitionResult.message());
+        } catch (Exception e){
+            throw new RuntimeException(e);
+        }
+    }
 }
